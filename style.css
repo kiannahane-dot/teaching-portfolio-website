@@ -44,4 +44,21 @@ body {
     padding: 1rem;
     margin-top: 2rem;
   }
-  
+  /* Domain Page Styling */
+.domain-section {
+  background-color: #ffffff;
+  border-left: 5px solid #d4c2a6;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+
+.domain-section h3 {
+  color: #4b3b2a;
+  margin-bottom: 0.5rem;
+}
+
+.domain-section p {
+  margin-bottom: 0.5rem;
+}
