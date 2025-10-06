@@ -149,3 +149,10 @@ nav ul li a.active {
   color: white;
   border: 1px solid #d4c2a6;
 }
+.firefly {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  transition: all 0.2s ease;
+}
