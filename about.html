@@ -1,67 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me | Kianna Cornell</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #f8f4e3;
+      color: #2b2b2b;
+      font-family: 'Georgia', serif;
+      animation: fadeIn 1s ease-in;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      color: #4b2e83;
+      border-bottom: 2px solid #bfa760;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .bio {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .bio img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #bfa760;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .bio-text {
+      max-width: 500px;
+      text-align: left;
+    }
+
+    .section {
+      margin-top: 2rem;
+    }
+
+    .section h3 {
+      color: #1a1a2e;
+      margin-bottom: 0.5rem;
+    }
+
+    .placeholder {
+      border: 2px dashed #bfa760;
+      background-color: #fff8e7;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+  </style>
 </head>
 <body>
   <header>
-  <h1>Kianna Cornell</h1>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="domain1.html">Planning & Preparation</a></li>
-      <li><a href="domain2.html">Classroom Environment</a></li>
-      <li><a href="domain3.html">Instruction</a></li>
-      <li><a href="domain4.html">Professional Responsibilities</a></li>
-    </ul>
-  </nav>
-</header>
-
+    <h1>Kianna Cornell</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Me</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="domain1.html">Planning & Preparation</a></li>
+        <li><a href="domain2.html">Classroom Environment</a></li>
+        <li><a href="domain3.html">Instruction</a></li>
+        <li><a href="domain4.html">Professional Responsibilities</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
     <h2>About Me</h2>
 
-    <section>
-      <p><strong><!-- Add your introduction here -->Hi! I'm Kianna Cornell, an educator who believes that learning should be joyful, meaningful, and inclusive. My goal is to create a classroom where every student feels seen, valued, and capable of success.</strong></p>
-      <p><!-- Add your background here -->I earned my degree in education from [Your University Name] and have experience teaching [grade levels or subjects]. I’m passionate about literacy development, building strong relationships, and integrating social-emotional learning into daily routines.</p>
-      <p><!-- Add your philosophy here -->I believe students learn best when they are given opportunities to explore, take risks, and express their creativity. My teaching style blends structure with flexibility—balancing academic rigor and emotional support.</p>
-    </section>
+    <div class="bio">
+      <img src="images/profile-placeholder.jpg" alt="Your photo" />
+      <div class="bio-text">
+        <p>👋 Hi! My name is <strong>Kianna Cornell</strong>, and I’m an educator who believes in creating learning environments filled with curiosity, creativity, and connection. I strive to build classrooms where every student feels valued and encouraged to grow.</p>
+        <p>I’m passionate about inclusive education, differentiated instruction, and using creativity to make learning meaningful. My goal is to inspire students to discover their own voices and develop a lifelong love for learning.</p>
+      </div>
+    </div>
 
-    <section>
-      <h3>My Teaching Values</h3>
+    <div class="section">
+      <h3>🎓 Background & Education</h3>
+      <div class="placeholder">
+        <p><em>Example filler:</em> “I earned my Bachelor’s degree in Elementary Education from [University Name]. My experiences in student teaching at [School Name] allowed me to work closely with diverse learners and deepen my understanding of effective classroom practices.”</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>💡 Teaching Philosophy</h3>
+      <div class="placeholder">
+        <p>“I believe that teaching is about lighting a spark. My approach blends structure and creativity — encouraging students to take risks, collaborate, and build confidence.”</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>🌟 Fun Facts</h3>
       <ul>
-        <li>🌱 Building a safe, inclusive learning environment</li>
-        <li>📚 Encouraging curiosity and lifelong learning</li>
-        <li>💬 Fostering communication and collaboration</li>
-        <li>💖 Prioritizing empathy and relationships</li>
+        <li>I love integrating art and storytelling into lessons.</li>
+        <li>My classroom theme changes every year — but always includes a touch of magic.</li>
+        <li>I’m a huge fan of Harry Potter, and I bring that sense of wonder into my classroom!</li>
       </ul>
-    </section>
+    </div>
   </main>
 
   <footer>
-    &copy; 2025 Kianna Cornell
+    <p>© 2025 Kianna Cornell | Teaching Portfolio</p>
   </footer>
-
-  <!-- Firefly Script -->
-  <script>
-  document.addEventListener("mousemove", function(e) {
-    const firefly = document.createElement("div");
-    firefly.classList.add("firefly");
-    document.body.appendChild(firefly);
-
-    firefly.style.left = e.pageX + "px";
-    firefly.style.top = e.pageY + "px";
-
-    setTimeout(() => firefly.remove(), 1000);
-  });
-  </script>
 </body>
 </html>
-
