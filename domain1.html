@@ -65,5 +65,21 @@
   <footer>
     &copy; 2025 Kianna Cornell
   </footer>
+  <script>
+document.addEventListener("mousemove", function(e) {
+  const firefly = document.createElement("div");
+  firefly.classList.add("firefly");
+  document.body.appendChild(firefly);
+
+  firefly.style.left = e.pageX + "px";
+  firefly.style.top = e.pageY + "px";
+
+  setTimeout(() => {
+    firefly.remove();
+  }, 1000); // disappears after 1 second
+});
+</script>
+
 </body>
 </html>
+
