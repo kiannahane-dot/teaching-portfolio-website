@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Kianna Cornell</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #f8f4e3;
+      font-family: 'Georgia', serif;
+      animation: fadeIn 1s ease-in;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      color: #4b2e83;
+      border-bottom: 2px solid #bfa760;
+      padding-bottom: 0.4rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background-color: #fff8e7;
+      border: 2px solid #bfa760;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #bfa760;
+      background-color: #f8f4e3;
+    }
+
+    .card h3 {
+      color: #1a1a2e;
+      margin-top: 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      margin: 8px 0;
+    }
+
+    .card a {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #1a1a2e;
+      color: #bfa760;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+    }
+
+    .card a:hover {
+      background-color: #bfa760;
+      color: #1a1a2e;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #1a1a2e;
+      color: #bfa760;
+      padding: 15px;
+      margin-top: 50px;
+    }
+
+    .placeholder {
+      border: 2px dashed #bfa760;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #fff8e7;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    /* Firefly cursor */
+    .firefly {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #bfa760;
+      pointer-events: none;
+      animation: flicker 1.5s infinite alternate;
+      z-index: 9999;
+    }
+
+    @keyframes flicker {
+      from { opacity: 0.4; transform: scale(1); }
+      to { opacity: 1; transform: scale(1.3); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kianna Cornell</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="domain1.html">Planning & Preparation</a></li>
+        <li><a href="domain2.html">Classroom Environment</a></li>
+        <li><a href="domain3.html">Instruction</a></li>
+        <li><a href="domain4.html">Professional Responsibilities</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Teaching Portfolio</h2>
+    <p style="text-align:center; max-width:700px; margin:0 auto 2rem;">
+      Explore my teaching materials, student work samples, and reflections below. Each artifact connects to a component of effective instruction and classroom practice.
+    </p>
+
+    <div class="portfolio-grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="images/lesson-placeholder.jpg" alt="Lesson plan placeholder">
+        <h3>Lesson Plan: Building Vocabulary</h3>
+        <p>This literacy lesson emphasizes collaborative discussion and word meaning through context clues.</p>
+        <a href="pdfs/vocabulary-lesson.pdf" target="_blank">View PDF</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="images/student-work-placeholder.jpg" alt="Student work">
+        <h3>Student Work Sample</h3>
+        <p>A differentiated writing task showcasing student growth in narrative structure and descriptive language.</p>
+        <a href="pdfs/student-sample.pdf" target="_blank">View PDF</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="images/classroom-placeholder.jpg" alt="Classroom photo">
+        <h3>Classroom Environment</h3>
+        <p>Snapshot of my classroom setup designed to promote independence, collaboration, and curiosity.</p>
+        <a href="pdfs/classroom-reflection.pdf" target="_blank">Read Reflection</a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <img src="images/assessment-placeholder.jpg" alt="Assessment artifact">
+        <h3>Assessment Example</h3>
+        <p>Formative assessment used to monitor student understanding and guide next instructional steps.</p>
+        <a href="pdfs/assessment-sample.pdf" target="_blank">View Artifact</a>
+      </div>
+    </div>
+
+    <div class="placeholder">
+      <h3>🪄 Add More Artifacts</h3>
+      <p>To add more cards, copy one of the examples above and replace the image, title, and PDF link.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Kianna Cornell | Teaching Portfolio</p>
+  </footer>
+
+  <script>
+    document.addEventListener("mousemove", function(e) {
+      const firefly = document.createElement("div");
+      firefly.classList.add("firefly");
+      document.body.appendChild(firefly);
+      firefly.style.left = e.pageX + "px";
+      firefly.style.top = e.pageY + "px";
+      setTimeout(() => firefly.remove(), 1500);
+    });
+  </script>
+</body>
+</html>
