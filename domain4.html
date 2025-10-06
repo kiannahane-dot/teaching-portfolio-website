@@ -69,5 +69,18 @@
     setTimeout(() => firefly.remove(), 1200);
   });
   </script>
+  <script>
+// Highlight current page in nav
+const navLinks = document.querySelectorAll('nav ul li a');
+const currentPage = window.location.pathname.split("/").pop(); // gets current filename
+
+navLinks.forEach(link => {
+  if(link.getAttribute('href') === currentPage) {
+    link.classList.add('active');
+  }
+});
+</script>
+
 </body>
 </html>
+
