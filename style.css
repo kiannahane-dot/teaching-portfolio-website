@@ -1,64 +1,136 @@
+/* ------------------------------
+   Kianna Cornell | Teaching Portfolio
+   Theme: Subtle Harry Potter Warmth + Firefly Cursor
+--------------------------------- */
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    background-color: #fdfdfd;
-    color: #333;
-  }
-  
-  header {
-    background-color: #3b6ea5;
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 0.5rem;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
-  
-  .intro {
-    text-align: center;
-    padding: 3rem 1rem;
-    max-width: 700px;
-    margin: auto;
-  }
-  
-  footer {
-    text-align: center;
-    background-color: #f1f1f1;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
-  /* Domain Page Styling */
-.domain-section {
+  font-family: "Poppins", sans-serif;
+  background-color: #f6f4ec; /* parchment cream */
+  color: #2d2b2a;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  cursor: none; /* hide default cursor for firefly effect */
+}
+
+/* Header */
+header {
+  background-color: #2e2a47; /* Hogwarts navy-purple */
+  color: #f5e6b1; /* warm gold text */
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-bottom: 3px solid #b2975b;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #2e2a47;
+  background-color: #f5e6b1;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  border: 1px solid #b2975b;
+}
+
+nav ul li a:hover {
+  background-color: #b2975b;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(178,151,91,0.5);
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
   background-color: #ffffff;
-  border-left: 5px solid #d4c2a6;
-  padding: 1rem 1.2rem;
-  margin-bottom: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+  border-radius: 16px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
 }
 
-.domain-section h3 {
-  color: #4b3b2a;
+main h2 {
+  color: #2e2a47;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #b2975b;
+  padding-bottom: 0.5rem;
+}
+
+main h3 {
+  color: #3f3b62;
   margin-bottom: 0.5rem;
 }
 
-.domain-section p {
-  margin-bottom: 0.5rem;
+main p {
+  margin-bottom: 1.2rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #2e2a47;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #f5e6b1;
+  border-top: 2px solid #b2975b;
+}
+
+/* Firefly Cursor Effect */
+.firefly {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: #ffdf5d;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.8;
+  box-shadow: 0 0 10px #ffdf5d, 0 0 20px #ffdf5d;
+  animation: flicker 1.5s infinite alternate;
+  z-index: 9999;
+}
+
+@keyframes flicker {
+  from { opacity: 0.8; transform: scale(1); }
+  to { opacity: 0.3; transform: scale(0.8); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+  nav ul {
+    gap: 0.5rem;
+  }
+  main {
+    margin: 1rem;
+    padding: 1rem;
+  }
 }
