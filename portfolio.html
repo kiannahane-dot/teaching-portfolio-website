@@ -7,6 +7,20 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 </head>
+  <script>
+// Highlight current page in nav robustly
+const navLinks = document.querySelectorAll('nav ul li a');
+const currentPath = window.location.pathname;
+
+// Loop through links
+navLinks.forEach(link => {
+  const linkPath = new URL(link.href).pathname;
+  if (linkPath === currentPath || (linkPath.endsWith('index.html') && currentPath.endsWith('/'))) {
+    link.classList.add('active');
+  }
+});
+</script>
+
 <body>
   <header>
     <h1>My Teaching Portfolio</h1>
@@ -78,4 +92,5 @@ navLinks.forEach(link => {
 
 </body>
 </html>
+
 
