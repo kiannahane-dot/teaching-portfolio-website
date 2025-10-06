@@ -3,15 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Teaching Portfolio</title>
+  <title>Kianna Cornell | Teaching Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* --- Color Theme (Subtle Harry Potter Inspired) --- */
+    :root {
+      --deep-navy: #1a1a2e;
+      --gold-accent: #bfa760;
+      --soft-parchment: #f8f4e3;
+      --plum: #4b2e83;
+      --text-dark: #2b2b2b;
+    }
+
+    body {
+      background-color: var(--soft-parchment);
+      color: var(--text-dark);
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      background-color: var(--deep-navy);
+      color: var(--gold-accent);
+      padding: 15px 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: var(--gold-accent);
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 10px;
+      transition: all 0.3s;
+    }
+
+    nav ul li a:hover, nav ul li a.active {
+      background-color: var(--gold-accent);
+      color: var(--deep-navy);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    h1, h2 {
+      color: var(--plum);
+    }
+
+    .hero-img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--gold-accent);
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+
+    .placeholder {
+      border: 2px dashed var(--gold-accent);
+      border-radius: 10px;
+      padding: 40px;
+      margin: 20px 0;
+      background-color: #fff8e7;
+    }
+
+    footer {
+      text-align: center;
+      background-color: var(--deep-navy);
+      color: var(--gold-accent);
+      padding: 15px;
+      margin-top: 60px;
+    }
+
+    /* --- Firefly Cursor --- */
+    .firefly {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold-accent);
+      pointer-events: none;
+      animation: flicker 1.5s infinite alternate;
+      z-index: 9999;
+    }
+
+    @keyframes flicker {
+      from { opacity: 0.4; transform: scale(1); }
+      to { opacity: 1; transform: scale(1.3); }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to My Teaching Portfolio</h1>
+    <h1>Kianna Cornell</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
         <li><a href="domain1.html">Planning & Preparation</a></li>
         <li><a href="domain2.html">Classroom Environment</a></li>
         <li><a href="domain3.html">Instruction</a></li>
@@ -20,28 +135,29 @@
     </nav>
   </header>
 
-  <section class="intro">
-    <h2>Hello, my name is Kianna Cornell</h2>
-    <p>Welcome to my teaching portfolio! Here you’ll find examples of my work, reflections, and artifacts organized by Danielson’s Framework for Teaching.</p>
-  </section>
+  <main class="container">
+    <img src="images/profile-placeholder.jpg" alt="Profile Picture" class="hero-img" />
+    <h2>Welcome to My Teaching Portfolio</h2>
+    <p>This site highlights my professional growth, teaching philosophy, and classroom practices aligned with the Danielson Framework for Teaching. Explore each domain to see my work samples, reflections, and artifacts that showcase my journey as an educator.</p>
+
+    <div class="placeholder">
+      <h3>📸 Image Placeholder</h3>
+      <p>Replace this section with a photo of your classroom, students engaged in learning, or a creative banner that represents your teaching style.</p>
+    </div>
+
+    <div class="placeholder">
+      <h3>🪄 Featured Reflection or Quote</h3>
+      <p>“Education is not the filling of a pail, but the lighting of a fire.” — William Butler Yeats</p>
+    </div>
+  </main>
 
   <footer>
-    <p>© 2025 kiannahane@outlook.com | <a href="mailto:kiannahane@outlook.com">Contact Me</a></p>
+    <p>© 2025 Kianna Cornell | Teaching Portfolio</p>
   </footer>
+
   <script>
-document.addEventListener("mousemove", function(e) {
-  const firefly = document.createElement("div");
-  firefly.classList.add("firefly");
-  document.body.appendChild(firefly);
-
-  firefly.style.left = e.pageX + "px";
-  firefly.style.top = e.pageY + "px";
-
-  setTimeout(() => {
-    firefly.remove();
-  }, 1000); // disappears after 1 second
-});
-</script>
-
-</body>
-</html>
+    // Firefly cursor effect
+    document.addEventListener("mousemove", function(e) {
+      const firefly = document.createElement("div");
+      firefly.classList.add("firefly");
+      document.body.ap
