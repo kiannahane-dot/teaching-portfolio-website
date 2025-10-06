@@ -143,3 +143,9 @@ footer {
   nav ul { gap: 0.5rem; }
   header h1 { font-size: 1.5rem; }
 }
+/* Active link styling */
+nav ul li a.active {
+  background-color: #bfa76a; /* subtle gold accent */
+  color: white;
+  border: 1px solid #d4c2a6;
+}
