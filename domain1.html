@@ -77,30 +77,35 @@ navLinks.forEach(link => {
     <p>© 2025 Kianna Cornell | Teaching Portfolio</p>
   </footer>
 
-  <!-- Firefly Cursor Script -->
   <script>
-  document.addEventListener('mousemove', e => {
-    const firefly = document.createElement('div');
-    firefly.className = 'firefly';
-    firefly.style.left = e.pageX + 'px';
-    firefly.style.top = e.pageY + 'px';
-    document.body.appendChild(firefly);
-    setTimeout(() => firefly.remove(), 1200);
-  });
-  </script>
-  <script>
-// Highlight current page in nav
-const navLinks = document.querySelectorAll('nav ul li a');
-const currentPage = window.location.pathname.split("/").pop(); // gets current filename
-
-navLinks.forEach(link => {
-  if(link.getAttribute('href') === currentPage) {
-    link.classList.add('active');
+// Firefly cursor effect
+document.addEventListener('mousemove', e => {
+  const firefly = document.createElement('div');
+  firefly.className = 'firefly';
+  firefly.style.left = e.pageX + 'px';
+  firefly.style.top = e.pageY + 'px';
+  
+  // Check if mouse is over nav
+  const nav = document.querySelector('nav');
+  if(nav && nav.contains(e.target)) {
+    firefly.style.background = 'radial-gradient(circle, #f9e79f 0%, #f1c40f 80%)';
+    firefly.style.width = '6px';
+    firefly.style.height = '6px';
+    firefly.style.opacity = '0.9';
+  } else {
+    firefly.style.background = '#ffffff';
+    firefly.style.width = '4px';
+    firefly.style.height = '4px';
+    firefly.style.opacity = '0.5';
   }
+
+  document.body.appendChild(firefly);
+  setTimeout(() => firefly.remove(), 1200);
 });
 </script>
 
 </body>
 </html>
+
 
 
