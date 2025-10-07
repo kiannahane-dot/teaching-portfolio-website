@@ -1,158 +1,218 @@
-/* ------------------------------
-   Kianna Cornell | Teaching Portfolio
-   Restyled: Subtle Harry Potter aesthetic
---------------------------------- */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kianna Cornell | Teaching Portfolio</title>
 
-/* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400&display=swap');
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  cursor: url('https://cur.cursors-4u.net/user/use-1/use160.cur'), auto;
-}
+  <!-- CSS -->
+  <style>
+    /* ------------------------------
+       Kianna Cornell | Teaching Portfolio
+       Restyled: Subtle Harry Potter aesthetic
+    --------------------------------- */
 
-/* Body */
-body {
-  font-family: "Poppins", sans-serif;
-  background-color: #f8f6f1;
-  color: #3c2f2f;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
-}
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      cursor: none; /* hides default cursor for firefly effect */
+    }
 
-/* Firefly Cursor Effect */
-.firefly {
-  position: fixed;
-  width: 6px;
-  height: 6px;
-  background: radial-gradient(circle, #c7a76c 0%, transparent 80%);
-  border-radius: 50%;
-  pointer-events: none;
-  animation: fade 1.2s linear forwards;
-  z-index: 9999;
-}
-@keyframes fade {
-  from { opacity: 1; transform: scale(1); }
-  to { opacity: 0; transform: scale(2); }
-}
+    /* Body */
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f8f6f1;
+      color: #3c2f2f;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
 
-/* Header */
-header {
-  background-color: #e9dfc6;
-  color: #3c2f2f;
-  text-align: center;
-  padding: 1.5rem 1rem;
-  border-bottom: 3px solid #c7a76c;
-}
-header h1 {
-  font-family: "Cinzel", serif;
-  font-size: 2rem;
-  margin-bottom: 0.3rem;
-  letter-spacing: 1px;
-}
+    /* Firefly Cursor Effect */
+    .firefly {
+      position: fixed;
+      width: 6px;
+      height: 6px;
+      background: radial-gradient(circle, #c7a76c 0%, transparent 80%);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: fade 0.8s linear forwards;
+      z-index: 9999;
+      mix-blend-mode: screen;
+      transition: all 0.2s ease;
+    }
 
-/* Navigation */
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 0.5rem;
-}
-nav ul li a {
-  text-decoration: none;
-  color: #3c2f2f;
-  background-color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 30px;
-  border: 1px solid #c7a76c;
-  transition: all 0.3s ease;
-}
-nav ul li a:hover {
-  background-color: #5b2c2c;
-  color: #fff;
-}
+    @keyframes fade {
+      from { opacity: 1; transform: scale(1); }
+      to { opacity: 0; transform: scale(2); }
+    }
 
-/* Main */
-main {
-  flex: 1;
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-main h2 {
-  font-family: "Cinzel", serif;
-  color: #5b2c2c;
-  border-bottom: 2px solid #c7a76c;
-  margin-bottom: 1rem;
-  padding-bottom: 0.3rem;
-}
+    /* Header */
+    header {
+      background-color: #e9dfc6;
+      color: #3c2f2f;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      border-bottom: 3px solid #c7a76c;
+    }
 
-/* Image placeholders */
-.img-rect {
-  width: 100%;
-  height: 220px;
-  background-color: #f0e8dc;
-  border: 2px dashed #c7a76c;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-style: italic;
-  color: #a7926f;
-  margin: 1rem 0;
-}
-.img-circle {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background-color: #f0e8dc;
-  border: 2px dashed #c7a76c;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-style: italic;
-  color: #a7926f;
-  margin: 1rem auto;
-}
+    header h1 {
+      font-family: "Cinzel", serif;
+      font-size: 2rem;
+      margin-bottom: 0.3rem;
+      letter-spacing: 1px;
+    }
 
-/* Footer */
-footer {
-  text-align: center;
-  background-color: #e9dfc6;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #3c2f2f;
-  border-top: 2px solid #c7a76c;
-}
+    /* Navigation */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
 
-/* Responsive */
-@media (max-width: 600px) {
-  main { margin: 1rem; padding: 1rem; }
-  nav ul { gap: 0.5rem; }
-  header h1 { font-size: 1.5rem; }
-}
-/* Active link styling */
-nav ul li a.active {
-  background-color: #bfa76a; /* subtle gold accent */
-  color: white;
-  border: 1px solid #d4c2a6;
-}
-.firefly {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  mix-blend-mode: screen;
-  transition: all 0.2s ease;
-}
+    nav ul li a {
+      text-decoration: none;
+      color: #3c2f2f;
+      background-color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      border: 1px solid #c7a76c;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #5b2c2c;
+      color: #fff;
+    }
+
+    nav ul li a.active {
+      background-color: #bfa76a; /* subtle gold accent */
+      color: white;
+      border: 1px solid #d4c2a6;
+    }
+
+    /* Main */
+    main {
+      flex: 1;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    main h2 {
+      font-family: "Cinzel", serif;
+      color: #5b2c2c;
+      border-bottom: 2px solid #c7a76c;
+      margin-bottom: 1rem;
+      padding-bottom: 0.3rem;
+    }
+
+    /* Image placeholders */
+    .img-rect {
+      width: 100%;
+      height: 220px;
+      background-color: #f0e8dc;
+      border: 2px dashed #c7a76c;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-style: italic;
+      color: #a7926f;
+      margin: 1rem 0;
+    }
+
+    .img-circle {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-color: #f0e8dc;
+      border: 2px dashed #c7a76c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-style: italic;
+      color: #a7926f;
+      margin: 1rem auto;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background-color: #e9dfc6;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #3c2f2f;
+      border-top: 2px solid #c7a76c;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      main { margin: 1rem; padding: 1rem; }
+      nav ul { gap: 0.5rem; }
+      header h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Kianna Cornell</h1>
+    <p>Teaching Portfolio</p>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="classroom-management.html">Classroom Management</a></li>
+        <li><a href="artifacts.html">Artifacts</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Welcome</h2>
+    <p>Welcome to my teaching portfolio! Here, you'll find reflections, artifacts, and philosophy statements that represent my growth as an educator and my passion for teaching.</p>
+
+    <div class="img-rect">Your Featured Image Here</div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kianna Cornell | Teaching Portfolio</p>
+  </footer>
+
+  <!-- Firefly Cursor Script -->
+  <script>
+    document.addEventListener("mousemove", (e) => {
+      const firefly = document.createElement("div");
+      firefly.className = "firefly";
+      document.body.appendChild(firefly);
+
+      firefly.style.left = `${e.pageX}px`;
+      firefly.style.top = `${e.pageY}px`;
+
+      const size = Math.random() * 3 + 3; // 3–6px for crisp look
+      firefly.style.width = `${size}px`;
+      firefly.style.height = `${size}px`;
+      firefly.style.background = `radial-gradient(circle, rgba(199,167,108,0.8) 0%, transparent 80%)`;
+
+      setTimeout(() => firefly.remove(), 800); // short + crisp
+    });
+  </script>
+</body>
+</html>
