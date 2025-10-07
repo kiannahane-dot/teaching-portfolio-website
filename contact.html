@@ -70,35 +70,28 @@ navLinks.forEach(link => {
     <p>© 2025 Kianna Cornell | Teaching Portfolio</p>
   </footer>
 
- <script>
-// Firefly cursor effect
-document.addEventListener('mousemove', e => {
-  const firefly = document.createElement('div');
-  firefly.className = 'firefly';
-  firefly.style.left = e.pageX + 'px';
-  firefly.style.top = e.pageY + 'px';
-  
-  // Check if mouse is over nav
-  const nav = document.querySelector('nav');
-  if(nav && nav.contains(e.target)) {
-    firefly.style.background = 'radial-gradient(circle, #f9e79f 0%, #f1c40f 80%)';
-    firefly.style.width = '6px';
-    firefly.style.height = '6px';
-    firefly.style.opacity = '0.9';
-  } else {
-    firefly.style.background = '#ffffff';
-    firefly.style.width = '4px';
-    firefly.style.height = '4px';
-    firefly.style.opacity = '0.5';
-  }
+<script>
+  document.addEventListener("mousemove", (e) => {
+    const firefly = document.createElement("div");
+    firefly.className = "firefly";
+    document.body.appendChild(firefly);
 
-  document.body.appendChild(firefly);
-  setTimeout(() => firefly.remove(), 1200);
-});
+    firefly.style.left = `${e.pageX}px`;
+    firefly.style.top = `${e.pageY}px`;
+
+    const size = Math.random() * 3 + 3;
+    firefly.style.width = `${size}px`;
+    firefly.style.height = `${size}px`;
+    firefly.style.background = `radial-gradient(circle, rgba(199,167,108,0.8) 0%, transparent 80%)`;
+
+    setTimeout(() => firefly.remove(), 800);
+  });
 </script>
+
 
 </body>
 </html>
+
 
 
 
